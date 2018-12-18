@@ -1,6 +1,6 @@
 # SSAFY - DAY 02
 
-## Python 심화
+## Python 심화에서 GitHub 사용까지
 
 ### Git Bash를 써보자.
 
@@ -10,11 +10,10 @@
   - touch 파일명.확장자 : 파일 생성
   - pip install 모듈명 : 모듈 설치 // ex) pip install requests
   - python 파일명.py : 파이썬으로 실행
-  - 
 
 
 
-### 웹브라우저
+### Web browser
 
 - import webbrowser
   - <u>http:// ~ ?</u> 까지는 웹페이지의 도메인.
@@ -33,7 +32,7 @@ for q in q_list:
 #webbrowser.open_new(url)
 ```
 
-### 웹 크롤링 실습 - 실시간 검색어
+### Web Crawling 실습 - 실시간 검색어
 
 - <u>zzul.li</u> 사이트 애용하세요~ : url 줄이기!
 - requests module
@@ -61,7 +60,7 @@ pick = soup.select('#mArticle > div.cmain_tmp > div.section_media > div.hotissue
 print(pick)
 ```
 
-### 웹 크롤링 실습2  - 비트코인
+### Web Crawling 실습2  - 비트코인
 
 - 규칙을 가지고 크롤링
   - soup.select()에서 <u>coin_list</u>가 유일한 클래스명이기 때문에 바로 써도 된다!
@@ -82,7 +81,7 @@ for coin in coins:
     print("- - - - - - - - - -")
 ```
 
-### 웹 크롤링 실습3 - 환율
+### Web Crawling 실습3 - 환율
 
 ```python
 import requests
@@ -118,7 +117,7 @@ for exchn in exchns:
 
 ```
 
-### 웹 크롤링 실습4 - 멜론 Top50
+### Web Crawling 실습4 - 멜론 Top50
 
 - 멜론은 자체적으로 헤더부분이 비어 있으면 권한을 주지 않는다.
   - headers = {~}부분을 통해 헤더 부분에 정보를 넣어 준 후 크롤링 한다.
@@ -171,3 +170,19 @@ for mt in music_table:
         newname = filename.replace('APPLE', 'SSAFY')
         os.rename(filename, newname)
     ```
+
+
+
+### Git과 GitHub를 써보자!
+
+- GitHub을 적용해 보자!
+  1. git init : git 시작
+  2. ls : 현재 폴더에 어떤 파일 있는지 표시
+  3. ls -a : 숨김 폴더까지 파일 표시
+     (git init를 했다면 . 과 .. 과 .git 이 생성됐을 것 .은 현재 폴더 ..은 상위 폴더 이다)
+  4. git add "파일명" : 파일명 추가, (폴더 내 모든 파일은 ".") // U > A 변경
+  5. git commit -m "메모" : 파일 추가하고 코멘트 추가 // 초록색 > 하얀색 변경
+  6. 파일 변경 한 후에는 그냥 add "파일명". 그리고 commit 남기면 된다! 아니, 그렇게 해야 적용된다.
+  7. GitHub에서 new repository 생성한 후에 Gib Bash에
+     git remote add origin https://github.com/domw324/python-local.git 입력
+     git push -u origin master 입력 후 mail, 비밀번호 입력 하면 끝!
